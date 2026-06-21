@@ -6,66 +6,69 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Basant Mohamed | GIS Specialist</title>
+<title>Basant Mohamed | GIS Portfolio</title>
 
 
 <style>
 
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',Arial,sans-serif;
 }
 
 
 body{
 
-    background:#07111f;
-    color:white;
-    line-height:1.6;
+background:#050b18;
+color:#ffffff;
 
 }
 
 
+/* NAV */
+
 header{
 
-    padding:25px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    position:sticky;
-    top:0;
-    background:#07111fee;
-    z-index:10;
+height:80px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:0 8%;
+background:#071426;
+position:sticky;
+top:0;
 
 }
 
 
 .logo{
 
-    font-size:25px;
-    font-weight:bold;
-    color:#00d9ff;
+font-size:28px;
+font-weight:700;
+color:#35e0d0;
 
 }
+
 
 
 nav a{
 
-    color:white;
-    text-decoration:none;
-    margin-left:25px;
+color:white;
+text-decoration:none;
+margin-left:25px;
 
 }
+
 
 
 nav a:hover{
 
-    color:#00d9ff;
+color:#35e0d0;
 
 }
-
 
 
 /* HERO */
@@ -73,75 +76,74 @@ nav a:hover{
 
 .hero{
 
-    min-height:90vh;
-    display:flex;
-    align-items:center;
-    padding:0 8%;
-    background:
-    linear-gradient(
-    rgba(0,0,0,.4),
-    rgba(0,0,0,.7)
-    );
+min-height:90vh;
+display:flex;
+align-items:center;
+padding:8%;
+
+background:
+radial-gradient(circle at top right,#163b55,#050b18 50%);
 
 }
 
 
 .hero h1{
 
-    font-size:55px;
+font-size:60px;
 
 }
 
 
 .hero span{
 
-    color:#00d9ff;
+color:#35e0d0;
 
 }
 
 
 .hero p{
 
-    margin:20px 0;
-    color:#ccc;
-    max-width:600px;
-
-}
-
-
-.btn{
-
-    display:inline-block;
-    padding:14px 30px;
-    background:#00d9ff;
-    color:#001018;
-    border-radius:30px;
-    text-decoration:none;
-    font-weight:bold;
+margin:25px 0;
+color:#b7c4d6;
+font-size:18px;
+max-width:600px;
 
 }
 
 
 
-/* SECTIONS */
+.button{
 
+padding:14px 35px;
+background:#35e0d0;
+color:#021018;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+
+}
+
+
+
+
+/* GENERAL */
 
 section{
 
-    padding:80px 8%;
+padding:80px 8%;
 
 }
+
 
 
 .title{
 
-    text-align:center;
-    font-size:40px;
-    margin-bottom:50px;
-    color:#00d9ff;
+text-align:center;
+font-size:40px;
+margin-bottom:50px;
+color:#35e0d0;
 
 }
-
 
 
 /* ABOUT */
@@ -149,12 +151,14 @@ section{
 
 .about p{
 
-    max-width:800px;
-    margin:auto;
-    text-align:center;
-    color:#ddd;
+max-width:800px;
+margin:auto;
+text-align:center;
+color:#c8d3e0;
+font-size:18px;
 
 }
+
 
 
 
@@ -163,52 +167,20 @@ section{
 
 .skills{
 
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:20px;
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
 
 }
 
 
 .skill{
 
-    padding:15px 25px;
-    background:#10243a;
-    border-radius:30px;
-    border:1px solid #00d9ff55;
-
-}
-
-
-
-/* SERVICES */
-
-
-.cards{
-
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-
-}
-
-
-.card{
-
-background:rgba(255,255,255,.08);
-padding:30px;
-border-radius:20px;
-border:1px solid rgba(255,255,255,.1);
-backdrop-filter:blur(10px);
-
-}
-
-
-.card h3{
-
-color:#00d9ff;
-margin-bottom:15px;
+background:#10253d;
+padding:15px 25px;
+border-radius:25px;
+border:1px solid #35e0d044;
 
 }
 
@@ -217,57 +189,76 @@ margin-bottom:15px;
 /* PROJECTS */
 
 
-.project-container{
+.projects-grid{
+
 
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
+grid-template-columns:
+repeat(auto-fit,minmax(300px,1fr));
+
+gap:35px;
+
 
 }
 
 
 
-.project-card{
+.project{
 
-background:rgba(255,255,255,.08);
-border-radius:20px;
+
+background:
+linear-gradient(
+145deg,
+#10253d,
+#071426
+);
+
+
+border-radius:22px;
 overflow:hidden;
+border:1px solid #ffffff15;
+
 transition:.4s;
-border:1px solid rgba(255,255,255,.15);
+
 
 }
 
 
-.project-card:hover{
 
-transform:translateY(-10px);
+.project:hover{
+
+transform:translateY(-12px);
 
 }
 
 
-.project-card img{
+
+.project img{
 
 width:100%;
-height:220px;
+height:230px;
 object-fit:cover;
 
 }
 
 
-.project-card h3{
 
-padding:15px;
-color:#00d9ff;
+.project h3{
+
+padding:20px 20px 10px;
+color:#35e0d0;
+
+}
+
+
+
+.project p{
+
+padding:0 20px 25px;
+color:#b8c4d3;
 
 }
 
-
-.project-card p{
-
-padding:0 15px 20px;
-color:#ccc;
-
-}
 
 
 
@@ -283,10 +274,10 @@ text-align:center;
 
 footer{
 
+padding:20px;
 text-align:center;
-padding:25px;
-background:#050b14;
-color:#aaa;
+background:#020611;
+color:#8795a8;
 
 }
 
@@ -302,16 +293,20 @@ color:#aaa;
 
 <header>
 
+
 <div class="logo">
-Basant GIS
+Basant Mohamed
 </div>
 
 
 <nav>
 
 <a href="#about">About</a>
-<a href="#services">Services</a>
+
 <a href="#projects">Projects</a>
+
+<a href="#skills">Skills</a>
+
 <a href="#contact">Contact</a>
 
 </nav>
@@ -322,27 +317,40 @@ Basant GIS
 
 
 
+
 <section class="hero">
 
 
 <div>
 
 <h1>
-Basant Mohamed
+
+Spatial Intelligence
 <br>
-<span>GIS Specialist</span>
+
+<span>
+GIS Solutions
+</span>
+
 </h1>
 
 
+
 <p>
-Spatial Data Analyst specialized in GIS Mapping,
-Remote Sensing, Spatial Analysis and Digital Cartography.
+
+GIS Specialist focused on Spatial Analysis,
+Digital Mapping, Remote Sensing and Geospatial Solutions.
+
 </p>
 
 
-<a class="btn" href="#projects">
-View Projects
+
+<a class="button" href="#projects">
+
+Explore Projects
+
 </a>
+
 
 
 </div>
@@ -355,7 +363,9 @@ View Projects
 
 
 
-<section id="about" class="about">
+
+
+<section id="about">
 
 
 <h2 class="title">
@@ -363,12 +373,17 @@ About Me
 </h2>
 
 
+<div class="about">
+
 <p>
 
 GIS Specialist graduated from Surveying, Maps and Geographic Information Systems.
-Experienced in spatial analysis, mapping, and transforming geographic data into useful insights.
+Passionate about transforming spatial data into meaningful insights using GIS technologies.
 
 </p>
+
+
+</div>
 
 
 </section>
@@ -379,95 +394,34 @@ Experienced in spatial analysis, mapping, and transforming geographic data into 
 
 
 
-<section>
+<section id="skills">
 
 
 <h2 class="title">
-Skills
+Technical Skills
 </h2>
 
 
 <div class="skills">
 
+
 <div class="skill">ArcGIS</div>
+
 <div class="skill">QGIS</div>
+
 <div class="skill">Remote Sensing</div>
+
 <div class="skill">Python</div>
+
 <div class="skill">SQL</div>
+
 <div class="skill">Power BI</div>
-<div class="skill">Spatial Analysis</div>
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-<section id="services">
-
-
-<h2 class="title">
-Services
-</h2>
-
-
-<div class="cards">
-
-
-<div class="card">
-
-<h3>
-GIS Mapping
-</h3>
-
-<p>
-Professional digital maps and spatial visualization.
-</p>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>
-Spatial Analysis
-</h3>
-
-<p>
-Location analysis and decision support solutions.
-</p>
-
-</div>
-
-
-
-
-<div class="card">
-
-<h3>
-Remote Sensing
-</h3>
-
-<p>
-Satellite data processing and terrain analysis.
-</p>
-
-</div>
-
 
 
 </div>
 
 
 </section>
-
 
 
 
@@ -480,26 +434,29 @@ Satellite data processing and terrain analysis.
 
 
 <h2 class="title">
+
 Featured GIS Projects
+
 </h2>
 
 
 
-<div class="project-container">
+<div class="projects-grid">
 
 
 
-<div class="project-card">
+<div class="project">
 
 <img src="images/contour-map.png">
 
 <h3>
-Contour Map Analysis
+Contour Map Visualization
 </h3>
 
 <p>
-Topographic mapping and elevation visualization.
+Topographic mapping and terrain visualization.
 </p>
+
 
 </div>
 
@@ -507,17 +464,20 @@ Topographic mapping and elevation visualization.
 
 
 
-<div class="project-card">
+
+<div class="project">
 
 <img src="images/dam-suitability.png">
 
+
 <h3>
-Dam Suitability Analysis
+Dam Site Suitability Analysis
 </h3>
 
 <p>
-GIS based site selection analysis.
+Spatial decision analysis for optimal locations.
 </p>
+
 
 </div>
 
@@ -525,17 +485,20 @@ GIS based site selection analysis.
 
 
 
-<div class="project-card">
+
+<div class="project">
 
 <img src="images/highest-elevation.png">
 
+
 <h3>
-Highest Elevation Mapping
+Highest Elevation Analysis
 </h3>
 
 <p>
-Terrain and elevation modelling.
+Elevation modelling and terrain analysis.
 </p>
+
 
 </div>
 
@@ -543,17 +506,21 @@ Terrain and elevation modelling.
 
 
 
-<div class="project-card">
+
+
+<div class="project">
 
 <img src="images/lowest-elevation.png">
+
 
 <h3>
 Lowest Elevation Mapping
 </h3>
 
 <p>
-Spatial terrain investigation.
+Terrain exploration using GIS techniques.
 </p>
+
 
 </div>
 
@@ -562,17 +529,20 @@ Spatial terrain investigation.
 
 
 
-<div class="project-card">
+
+<div class="project">
 
 <img src="images/strategic-peak.png">
 
+
 <h3>
-Strategic Peak Analysis
+Strategic Peak Detection
 </h3>
 
 <p>
-Spatial decision making using GIS.
+Spatial analysis for important locations.
 </p>
+
 
 </div>
 
@@ -582,7 +552,6 @@ Spatial decision making using GIS.
 
 
 </section>
-
 
 
 
@@ -595,19 +564,15 @@ Spatial decision making using GIS.
 
 <h2 class="title">
 Contact
+
 </h2>
 
 
 <p>
-Let's work together on GIS and spatial projects.
+
+Available for GIS projects and spatial solutions.
+
 </p>
-
-
-<br>
-
-<a class="btn" href="mailto:your-email@gmail.com">
-Email Me
-</a>
 
 
 </section>
@@ -618,12 +583,13 @@ Email Me
 
 <footer>
 
-© 2026 Basant Mohamed | GIS Portfolio
+© 2026 Basant Mohamed | Spatial Intelligence & GIS Solutions
 
 </footer>
 
 
 
 </body>
+
 
 </html>
