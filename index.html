@@ -628,6 +628,160 @@ GitHub
 © 2026 Basant Mohamed | Spatial Intelligence & GIS Solutions
 
 </footer>
+<!-- GALLERY POPUP -->
 
+<div id="galleryModal" class="gallery-modal">
+
+<span class="close-gallery" onclick="closeGallery()">&times;</span>
+
+<button class="gallery-btn prev" onclick="changeImage(-1)">❮</button>
+
+<img id="galleryImage" class="gallery-image">
+
+<button class="gallery-btn next" onclick="changeImage(1)">❯</button>
+
+</div>
+
+<style>
+
+.gallery-modal{
+display:none;
+position:fixed;
+z-index:9999;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.95);
+justify-content:center;
+align-items:center;
+}
+
+.gallery-image{
+max-width:90%;
+max-height:85vh;
+border-radius:15px;
+box-shadow:0 0 40px rgba(34,211,238,.25);
+}
+
+.close-gallery{
+position:absolute;
+top:20px;
+right:35px;
+font-size:50px;
+color:white;
+cursor:pointer;
+}
+
+.gallery-btn{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:rgba(255,255,255,.1);
+border:none;
+color:white;
+font-size:40px;
+padding:10px 18px;
+cursor:pointer;
+border-radius:10px;
+}
+
+.gallery-btn:hover{
+background:rgba(255,255,255,.2);
+}
+
+.prev{
+left:20px;
+}
+
+.next{
+right:20px;
+}
+
+</style>
+
+<script>
+
+const galleries = {
+
+geodatabase:[
+"images/01-Geodatabase/sinai-proposed.png",
+"images/01-Geodatabase/egypt-governorates.png",
+"images/01-Geodatabase/egypt-regions.png"
+],
+
+network:[
+"images/02-Network-Analysis/closest-facility.png",
+"images/02-Network-Analysis/location-allocation.png",
+"images/02-Network-Analysis/route-analysis.png",
+"images/02-Network-Analysis/service-area.png"
+],
+
+terrain:[
+"images/03-Terrain-Analysis/contour-map-wadi-fatimah.png",
+"images/03-Terrain-Analysis/slope-analysis.png",
+"images/03-Terrain-Analysis/aspect-analysis.png",
+"images/03-Terrain-Analysis/highest-elevation.png",
+"images/03-Terrain-Analysis/lowest-elevation.png"
+],
+
+hydrology:[
+"images/04-Hydrology/dam-suitability-wadi-khulais.png",
+"images/04-Hydrology/proposed-road-aljumum-bahrah.png",
+"images/04-Hydrology/wadi-fatimah-valley-analysis.png"
+],
+
+military:[
+"images/05-Military-Analysis/strategic-peak-analysis.png",
+"images/05-Military-Analysis/viewshed-analysis.png"
+],
+
+statistics:[
+"images/06-Spatial-Statistics/hospitals-median-center.png",
+"images/06-Spatial-Statistics/pharmacies-directional-distribution.png",
+"images/06-Spatial-Statistics/restaurants-central-location.png",
+"images/06-Spatial-Statistics/schools-facility-location.png",
+"images/06-Spatial-Statistics/supermarkets-central-location.png"
+]
+
+};
+
+let currentGallery = [];
+let currentIndex = 0;
+
+function openGallery(project){
+
+currentGallery = galleries[project];
+currentIndex = 0;
+
+document.getElementById("galleryModal").style.display="flex";
+
+document.getElementById("galleryImage").src =
+currentGallery[currentIndex];
+
+}
+
+function closeGallery(){
+
+document.getElementById("galleryModal").style.display="none";
+
+}
+
+function changeImage(step){
+
+currentIndex += step;
+
+if(currentIndex < 0)
+currentIndex = currentGallery.length - 1;
+
+if(currentIndex >= currentGallery.length)
+currentIndex = 0;
+
+document.getElementById("galleryImage").src =
+currentGallery[currentIndex];
+
+}
+
+</script>
 </body>
 </html>
