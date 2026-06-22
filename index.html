@@ -28,109 +28,6 @@ box-sizing:border-box;
 scroll-behavior:smooth;
 font-family:'Segoe UI',sans-serif;
 }
-<!-- POPUP GALLERY -->
-
-<div id="galleryModal" class="modal">
-  <span class="close" onclick="closeGallery()">&times;</span>
-
-  <div class="prev" onclick="changeImage(-1)">❮</div>
-  <div class="next" onclick="changeImage(1)">❯</div>
-
-  <div class="modal-content">
-    <img id="galleryImage" src="">
-  </div>
-</div>
-
-<script>
-
-const galleries = [
-
-[
-"images/01-Geodatabase/egypt-governorates.png",
-"images/01-Geodatabase/egypt-regions.png",
-"images/01-Geodatabase/sinai-proposed.png"
-],
-
-[
-"images/02-Network-Analysis/closest-facility.png",
-"images/02-Network-Analysis/location-allocation.png",
-"images/02-Network-Analysis/route-analysis.png",
-"images/02-Network-Analysis/service-area.png"
-],
-
-[
-"images/03-Terrain-Analysis/aspect-analysis.png",
-"images/03-Terrain-Analysis/contour-map-wadi-fatimah.png",
-"images/03-Terrain-Analysis/highest-elevation.png",
-"images/03-Terrain-Analysis/lowest-elevation.png",
-"images/03-Terrain-Analysis/slope-analysis.png"
-],
-
-[
-"images/04-Hydrology/dam-suitability-wadi-khulais.png",
-"images/04-Hydrology/proposed-road-aljumum-bahrah.png",
-"images/04-Hydrology/wadi-fatimah-valley-analysis.png"
-],
-
-[
-"images/05-Military-Analysis/strategic-peak-analysis.png",
-"images/05-Military-Analysis/viewshed-analysis.png"
-],
-
-[
-"images/06-Spatial-Statistics/hospitals-median-center.png",
-"images/06-Spatial-Statistics/pharmacies-directional-distribution.png",
-"images/06-Spatial-Statistics/restaurants-central-location.png",
-"images/06-Spatial-Statistics/schools-facility-location.png",
-"images/06-Spatial-Statistics/supermarkets-central-location.png"
-]
-
-];
-
-let currentProject = 0;
-let currentImage = 0;
-
-function openGallery(project){
-currentProject = project;
-currentImage = 0;
-document.getElementById("galleryModal").style.display = "block";
-showImage();
-}
-
-function showImage(){
-document.getElementById("galleryImage").src =
-galleries[currentProject][currentImage];
-}
-
-function changeImage(direction){
-currentImage += direction;
-
-if(currentImage < 0){
-currentImage =
-galleries[currentProject].length - 1;
-}
-
-if(currentImage >= galleries[currentProject].length){
-currentImage = 0;
-}
-
-showImage();
-}
-
-function closeGallery(){
-document.getElementById("galleryModal").style.display = "none";
-}
-
-window.onclick = function(event){
-const modal =
-document.getElementById("galleryModal");
-
-if(event.target == modal){
-closeGallery();
-}
-}
-
-</script>
 
 body{
 background:var(--bg);
@@ -346,13 +243,11 @@ transition:.4s;
 transform:translateY(-10px);
 border-color:#22D3EE55;
 }
-  
+
 .project img{
 width:100%;
-height:320px;
-object-fit:contain;
-background:#0b1220;
-padding:12px;
+height:250px;
+object-fit:cover;
 }
 
 .project-content{
@@ -420,62 +315,19 @@ color:var(--muted);
 }
 
 @media(max-width:768px){
-/* POPUP GALLERY */
 
-.modal{
+.hero h1{
+font-size:48px;
+}
+
+header{
+padding:0 5%;
+}
+
+nav{
 display:none;
-position:fixed;
-left:0;
-top:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.95);
-z-index:99999;
 }
 
-.modal-content{
-position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-width:90%;
-max-width:1200px;
-}
-
-.modal-content img{
-width:100%;
-max-height:85vh;
-object-fit:contain;
-}
-
-.close{
-position:absolute;
-top:20px;
-right:35px;
-font-size:50px;
-cursor:pointer;
-color:white;
-z-index:100000;
-}
-
-.prev,
-.next{
-position:absolute;
-top:50%;
-transform:translateY(-50%);
-font-size:60px;
-cursor:pointer;
-color:white;
-padding:20px;
-z-index:100000;
-}
-
-.prev{
-left:20px;
-}
-
-.next{
-right:20px;
 }
 
 </style>
@@ -615,13 +467,7 @@ Featured GIS Projects
   <!-- PROJECT 01 -->
 
 <div class="project">
-  
-<div class="project" onclick="openGallery(0)">
-<div class="project" onclick="openGallery(1)">
-<div class="project" onclick="openGallery(2)">
-<div class="project" onclick="openGallery(3)">
-<div class="project" onclick="openGallery(4)">
-<div class="project" onclick="openGallery(5)">
+
 <img src="images/01-Geodatabase/sinai-proposed.png" alt="Geodatabase Project">
 
 <div class="project-content">
@@ -753,9 +599,10 @@ Available for GIS projects, spatial analysis, mapping and geospatial consulting.
 </p>
 
 <div class="contact-links">
+<div class="contact-links">
 <a href="https://wa.me/201062613644" target="_blank">
 WhatsApp
-</a> 
+</a>
   
 <a href="mailto:basantalsmahy3@gmail.com">
 Email Me
@@ -778,114 +625,6 @@ GitHub
 © 2026 Basant Mohamed | Spatial Intelligence & GIS Solutions
 
 </footer>
-<!-- GALLERY MODAL -->
 
-<div id="galleryModal" class="modal">
-
-<span class="close" onclick="closeGallery()">&times;</span>
-
-<div class="prev" onclick="changeImage(-1)">❮</div>
-
-<div class="next" onclick="changeImage(1)">❯</div>
-
-<div class="modal-content">
-<img id="galleryImage" src="">
-</div>
-
-</div>
-
-<script>
-
-const galleries = [
-
-[
-"images/01-Geodatabase/egypt-governorates.png",
-"images/01-Geodatabase/egypt-regions.png",
-"images/01-Geodatabase/sinai-proposed.png"
-],
-
-[
-"images/02-Network-Analysis/closest-facility.png",
-"images/02-Network-Analysis/location-allocation.png",
-"images/02-Network-Analysis/route-analysis.png",
-"images/02-Network-Analysis/service-area.png"
-],
-
-[
-"images/03-Terrain-Analysis/aspect-analysis.png",
-"images/03-Terrain-Analysis/contour-map-wadi-fatimah.png",
-"images/03-Terrain-Analysis/highest-elevation.png",
-"images/03-Terrain-Analysis/lowest-elevation.png",
-"images/03-Terrain-Analysis/slope-analysis.png"
-],
-
-[
-"images/04-Hydrology/dam-suitability-wadi-khulais.png",
-"images/04-Hydrology/proposed-road-aljumum-bahrah.png",
-"images/04-Hydrology/wadi-fatimah-valley-analysis.png"
-],
-
-[
-"images/05-Military-Analysis/strategic-peak-analysis.png",
-"images/05-Military-Analysis/viewshed-analysis.png"
-],
-
-[
-"images/06-Spatial-Statistics/hospitals-median-center.png",
-"images/06-Spatial-Statistics/pharmacies-directional-distribution.png",
-"images/06-Spatial-Statistics/restaurants-central-location.png",
-"images/06-Spatial-Statistics/schools-facility-location.png",
-"images/06-Spatial-Statistics/supermarkets-central-location.png"
-]
-
-];
-
-let currentProject = 0;
-let currentImage = 0;
-
-function openGallery(project){
-currentProject = project;
-currentImage = 0;
-document.getElementById("galleryModal").style.display = "block";
-showImage();
-}
-
-function showImage(){
-document.getElementById("galleryImage").src =
-galleries[currentProject][currentImage];
-}
-
-function changeImage(direction){
-
-currentImage += direction;
-
-if(currentImage < 0){
-currentImage =
-galleries[currentProject].length - 1;
-}
-
-if(currentImage >= galleries[currentProject].length){
-currentImage = 0;
-}
-
-showImage();
-}
-
-function closeGallery(){
-document.getElementById("galleryModal").style.display = "none";
-}
-
-window.onclick = function(event){
-
-const modal =
-document.getElementById("galleryModal");
-
-if(event.target == modal){
-closeGallery();
-}
-
-}
-
-</script>
 </body>
 </html>
